@@ -29,10 +29,30 @@ export const CategoryList = nativeStyled.View`
   padding: 16px;
 `;
 
+export const CategoryButton = nativeStyled.Pressable<{ selected: boolean }>`
+  margin-right: 8px;
+  padding: 8px 12px;
+  border-radius: 18px;
+  background-color: ${({ selected }) => (selected ? "#4f0074" : "#ffffff")};
+`;
+
+export const CategoryButtonText = nativeStyled.Text<{ selected: boolean }>`
+  color: ${({ selected }) => (selected ? "#ffffff" : "#4f0074")};
+  font-size: 13px;
+`;
+
 export const ProductCard = nativeStyled.View`
   margin-bottom: 12px;
   padding: 16px;
-  background-color: #f71313;
+  background-color: #ffffff;
+  border-radius: 12px;
+`;
+
+export const ProductImage = nativeStyled.View`
+  min-height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 `;
 
 export const ProductName = nativeStyled.Text`
@@ -44,4 +64,10 @@ export const ProductName = nativeStyled.Text`
 export const ProductDetails = nativeStyled.Text`
   margin-top: 6px;
   color: #051944;
+`;
+
+export const MessageText = nativeStyled.Text`
+  padding: 24px 8px;
+  color: #4f0074;
+  text-align: center;
 `;
